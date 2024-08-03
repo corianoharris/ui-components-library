@@ -11,6 +11,12 @@ build/
 dist/
 storybook-static/
 
+# Netlify specific
+.netlify
+
+# Local Netlify CLI
+/netlify.toml
+
 # Node
 /node_modules
 npm-debug.log
