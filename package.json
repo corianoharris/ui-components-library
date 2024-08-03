@@ -7,7 +7,9 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:angular-storybook-project": "node dist/angular-storybook-project/server/server.mjs"
+    "serve:ssr:angular-storybook-project": "node dist/angular-storybook-project/server/server.mjs",
+    "storybook": "ng run angular-storybook-project:storybook",
+    "build-storybook": "ng run angular-storybook-project:build-storybook"
   },
   "private": true,
   "dependencies": {
@@ -21,6 +23,11 @@
     "@angular/platform-server": "^18.1.0",
     "@angular/router": "^18.1.0",
     "@angular/ssr": "^18.1.3",
+    "@fortawesome/angular-fontawesome": "^0.15.0",
+    "@fortawesome/fontawesome-svg-core": "^6.6.0",
+    "@fortawesome/free-brands-svg-icons": "^6.6.0",
+    "@fortawesome/free-regular-svg-icons": "^6.6.0",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "express": "^4.18.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
@@ -30,6 +37,16 @@
     "@angular-devkit/build-angular": "^18.1.3",
     "@angular/cli": "^18.1.3",
     "@angular/compiler-cli": "^18.1.0",
+    "@chromatic-com/storybook": "^1.6.1",
+    "@compodoc/compodoc": "^1.1.25",
+    "@storybook/addon-docs": "^8.2.7",
+    "@storybook/addon-essentials": "^8.2.7",
+    "@storybook/addon-interactions": "^8.2.7",
+    "@storybook/addon-links": "^8.2.7",
+    "@storybook/addon-onboarding": "^8.2.7",
+    "@storybook/angular": "^8.2.7",
+    "@storybook/blocks": "^8.2.7",
+    "@storybook/test": "^8.2.7",
     "@types/express": "^4.17.17",
     "@types/jasmine": "~5.1.0",
     "@types/node": "^18.18.0",
@@ -39,6 +56,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "storybook": "^8.2.7",
     "typescript": "~5.5.2"
   }
 }

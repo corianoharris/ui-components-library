@@ -1,0 +1,125 @@
+
+/**
+  * @tokens Colors
+  * @presenter Color
+*/
+
+:root {
+/* text  */
+--text-headline: #222223;  /*  @presenter Color */
+--text-body: #434446; /*  @presenter Color */
+--text-light: #707274; /*  @presenter Color */
+--text-black: #0b0b0c; /*  @presenter Color */
+
+/* ui  */
+--ui-active: #4a0eb0; /*  @presenter Color */
+--ui-hover: #320969; /*  @presenter Color */
+--ui-secondary-hover: #f5f0fe; /*  @presenter Color */
+--ui-menu-hover: #f8f8f8; /*  @presenter Color */
+--ui-disabled: #c6c7c7; /*  @presenter Color */
+--ui-focus: #9747ff; /*  @presenter Color */
+--ui-error: #ff2b2b; /*  @presenter Color */
+--ui-error-light: #ffeded; /*  @presenter Color */
+--ui-required: #c06700; /*  @presenter Color */
+--ui-required-light: #fdf4e5; /*  @presenter Color */
+
+/* surfaces */
+--surfaces-background: #f8f8f8; /*  @presenter Color */
+--surfaces-card: #ffffff; /*  @presenter Color */
+--surfaces-grey: #f1f1f1; /*  @presenter Color */
+--surfaces-overlay: #18191a99; /*  @presenter Color */
+
+/*  borders */
+--borders-rules: #e2e3e3;/*  @presenter Color */
+--borders-forms: #d4d5d5; /*  @presenter Color */
+--borders-form-hover: #5a5b5d; /*  @presenter Color */
+
+/* neturals */
+--neutrals-white: #ffffff; /*  @presenter Color */
+--neutrals-gray-012: #fbfbfb; /*  @presenter Color */
+--neutrals-gray-025: #f8f8f8; /*  @presenter Color */
+--neutrals-gray-050: #f1f1f1; /*  @presenter Color */
+--neutrals-gray-100: #e2e3e3; /*  @presenter Color */
+--neutrals-gray-150: #d4d5d5; /*  @presenter Color */
+--neutrals-gray-200: #c6c7c7; /*  @presenter Color */
+--neutrals-gray-300: #a9aaac; /*  @presenter Color */
+--neutrals-gray-387: #919293; /*  @presenter Color */
+--neutrals-gray-400: #8d8e90; /*  @presenter Color */
+--neutrals-gray-500: #707274; /*  @presenter Color */
+--neutrals-gray-600: #5a5b5d; /*  @presenter Color */
+--neutrals-gray-700: #434446; /*  @presenter Color */
+--neutrals-gray-800: #2d2e2e; /*  @presenter Color */
+--neutrals-gray-850: #222223; /*  @presenter Color */
+--neutrals-gray-900: #161717; /*  @presenter Color */
+--neutrals-gray-950: #0b0b0c; /*  @presenter Color */
+--neutrals-black: #000000;
+
+/*  alerts */
+--alerts-info-text: #196daa; /*  @presenter Color */
+--alerts-info-hover: #145788; /*  @presenter Color */
+--alerts-info: #196daa; /*  @presenter Color */
+--alerts-info-light-hover: #99c0dc; /*  @presenter Color */
+--alerts-info-light: #aecee4; /*  @presenter Color */
+--alerts-info-bg: #e4f1fa; /*  @presenter Color */
+--alerts-error-text: #d60000; /*  @presenter Color */
+--alerts-error-hover: #cc2222; /*  @presenter Color */
+--alerts-error: #ff2b2b; /*  @presenter Color */
+--alerts-error-light-hover: #ffaaaa; /*  @presenter Color */
+--alerts-error-light: #ffbfbf; /*  @presenter Color */
+--alerts-error-bg: #ffeded; /*  @presenter Color */
+--alerts-warning-text: #9e5400; /*  @presenter Color */
+--alerts-warning-hover: #c06700; /*  @presenter Color */
+--alerts-warning: #f08100; /*  @presenter Color */
+--alerts-warning-light-hover: #f9cd99; /*  @presenter Color */
+--alerts-warning-light: #fbd9b3; /*  @presenter Color */
+--alerts-warning-bg: #fdf4e5; /*  @presenter Color */
+--alerts-success-text: #377500; /*  @presenter Color */
+--alerts-success-hover: #3d8200; /*  @presenter Color */
+--alerts-success: #4ca300; /*  @presenter Color */
+--alerts-success-light-hover: #a7da7a; /*  @presenter Color */
+--alerts-success-light: #b6e38f; /*  @presenter Color */
+--alerts-success-bg: #eef7e5; /*  @presenter Color */
+
+/* brand */
+--brand-purple-050: #f5f0fe; /*  @presenter Color */
+--brand-purple-075: #efe8fc; /*  @presenter Color */
+--brand-purple-100: #e9dffa; /*  @presenter Color */
+--brand-purple-200: #c7b2ea; /*  @presenter Color */
+--brand-purple-300: #9747ff; /*  @presenter Color */
+--brand-purple-400: #4a0eb0; /*  @presenter Color */
+--brand-purple-500: #320969; /*  @presenter Color */
+--brand-magenta-light: #9b4686; /*  @presenter Color */
+--brand-magenta: #85216c; /*  @presenter Color */
+--brand-magenta-dark: #6a1a56; /*  @presenter Color */
+--brand-yellow-light: #f8d08d; /*  @presenter Color */
+--brand-yellow: #f6c471; /*  @presenter Color */
+--brand-yellow-dark: #d1a55b; /*  @presenter Color */
+
+/* data  */
+--data-reds-plum: #7e004a; /*  @presenter Color */
+--data-reds-rose: #c8708d; /*  @presenter Color */
+--data-reds-dull-red: #ac545c; /*  @presenter Color */
+--data-purples-bright-purple: #8f42d1; /*  @presenter Color */
+--data-purples-bright-purple-hover: #56287d; /*  @presenter Color */
+--data-purples-bright-purple-tint: #ddc6f1; /*  @presenter Color */
+--data-purples-dull-purple: #5b4585; /*  @presenter Color */
+--data-purples-dull-purple-hover: #372950; /*  @presenter Color */
+--data-purples-dull-purple-tint: #c9c2d8 ; /*  @presenter Color */
+--data-purples-lilac: #da90e8; /*  @presenter Color */
+--data-purples-cetera-purple: #45196f; /*  @presenter Color */
+--data-purples-rich-dark-purple: #4a0eb0; /*  @presenter Color */
+--data-blues-dark-blue: #02376c; /*  @presenter Color */
+--data-blues-blue: #0a78bb; /*  @presenter Color */
+--data-blues-light-blue: #4fa2d1; /*  @presenter Color */
+--data-blues-moderate-blue: #34738e; /*  @presenter Color */
+--data-blues-teal: #01a9a2; /*  @presenter Color */
+--data-green-green: #277823; /*  @presenter Color */
+--data-green-green-yellow: #a8c500; /*  @presenter Color */
+--data-oranges-orange: #ff8c00; /*  @presenter Color */
+--data-oranges-orange-hover: #cc7000; /*  @presenter Color */
+--data-oranges-orange-tint: #ffdcb2; /*  @presenter Color */
+--data-oranges-dull-orange: #c58428; /*  @presenter Color */
+--data-oranges-brown: #6b400c; /*  @presenter Color */
+--data-yellows-yellow: #dfd600; /*  @presenter Color */
+
+}

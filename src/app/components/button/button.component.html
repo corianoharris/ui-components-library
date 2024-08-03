@@ -1,0 +1,16 @@
+<button class="button" [type]="type" [ngClass]="classes" (click)="handleClick($event)" [disabled]="isDisabled"
+  [attr.aria-label]="text">
+  <div class="button__wrapper">
+    <div class="button__icon-wrapper" *ngIf="showIconLeft">
+      <fa-icon *ngIf="showFaIconLeft && !showSvgIconLeft" class="button__icon" [icon]="getIcon(faIconLeft)">
+      </fa-icon>
+      <img *ngIf="showSvgIconLeft && !showFaIconLeft" class="button__icon" [src]="svgIconLeft" alt="">
+    </div>
+    <span class="button__text" *ngIf="text">{{ text }}</span>
+    <div class="button__icon-wrapper" *ngIf="showIconRight">
+      <fa-icon *ngIf="showFaIconRight && !showSvgIconRight" class="button__icon" [icon]="getIcon(faIconRight)">
+      </fa-icon>
+      <img *ngIf="showSvgIconRight && !showFaIconRight" class="button__icon" [src]="svgIconRight" alt="">
+    </div>
+  </div>
+</button>

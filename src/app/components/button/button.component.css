@@ -1,0 +1,166 @@
+@import '../../../tokens/_variables.css';
+
+
+/* Button Base Styles */
+.button {
+    font-family: "Montserrat", "sans-serif";
+    font-weight: 700;
+    font-size: 13px;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    padding: 10px;
+    letter-spacing: 2px;
+    background-color: var(--brand-purple-400); /* Use var() for CSS variables */
+    min-width: 46px;
+    min-height: 24px;
+    text-transform: capitalize;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .button {
+      width: 100%;
+    }
+  }
+  
+  /* Button Icon */
+  .button__icon {
+    height: 16px;
+    width: 16px;
+    margin: 0 10px;
+  }
+  
+  /* Button Text */
+  .button__text {
+    font-size: 12px;
+    margin: 0 10px;
+  }
+  
+  /* Button Wrapper */
+  .button__wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 300px;
+    max-height: 36px;
+  }
+  
+  /* Primary Button */
+  .button--primary {
+    color: var(--neutrals-white);
+  }
+  
+  .button--primary:focus {
+    outline: 2px solid var(--brand-purple-300);
+    border: 2px solid var(--neutrals-white);
+  }
+  
+  .button--primary:hover {
+    background-color: var(--data-purples-bright-purple-hover);
+  }
+  
+  .button--primary:disabled {
+    cursor: not-allowed;
+    background-color: var(--neutrals-gray-200);
+    color: var(--neutrals-white);
+  }
+  
+  /* Secondary Button */
+  .button--secondary {
+    color: var(--data-purples-bright-purple-hover);
+    background-color: var(--neutrals-white);
+    border: 2px solid var(--brand-purple-400);
+  }
+  
+  .button--secondary:focus {
+    border: 2px solid var(--brand-purple-300);
+  }
+  
+  .button--secondary:hover {
+    background-color: var(--brand-purple-200);
+    border: 2px solid var(--data-purples-bright-purple-hover);
+  }
+  
+  .button--secondary:disabled {
+    cursor: not-allowed;
+    background-color: var(--neutrals-white);
+    border: 2px solid var(--neutrals-gray-200);
+    color: var(--neutrals-gray-200);
+  }
+  
+  /* Tertiary Button */
+  .button--tertiary {
+    color: var(--brand-purple-400);
+    background-color: var(--neutrals-white);
+  }
+  
+  .button--tertiary:focus {
+    border: 2px solid var(--brand-purple-300);
+  }
+  
+  .button--tertiary:hover {
+    background-color: var(--brand-purple-200);
+  }
+  
+  .button--tertiary:disabled {
+    cursor: not-allowed;
+    background-color: var(--neutrals-white);
+    color: var(--neutrals-gray-200);
+  }
+  
+  /* Destructive Button */
+  .button--destructive {
+    color: var(--alerts-error);
+    border: 2px solid var(--alerts-error);
+    background-color: var(--neutrals-white);
+  }
+  
+  .button--destructive:focus {
+    outline: 2px solid var(--alerts-error);
+    outline-offset: -5px;
+    border: 2px solid var(--brand-purple-300);
+  }
+  
+  .button--destructive:hover {
+    background-color: var(--alerts-error-light-hover);
+    border: 2px solid var(--alerts-error);
+    outline: none;
+  }
+  
+  .button--destructive:disabled {
+    cursor: not-allowed;
+    background-color: var(--neutrals-white);
+    border: 2px solid var(--neutrals-gray-200);
+    color: var(--neutrals-gray-200);
+    fill: var(--neutrals-gray-200);
+  }
+  
+  /* Button Sizes */
+  .button--small {
+    padding: 5px;
+    font-size: 12px;
+    line-height: 9px;
+    height: 24px;
+  }
+  
+  .button--medium {
+    padding: 10px;
+    font-size: 13px;
+    line-height: 15px;
+    height: 36px;
+  }
+  
+  .button--large {
+    padding: 14px;
+    font-size: 14px;
+    line-height: 16px;
+    height: 48px;
+  }
+  
+
+
+
