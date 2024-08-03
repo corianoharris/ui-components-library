@@ -1,4 +1,4 @@
-import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import { IconDefinition, IconName, IconPrefix } from '@fortawesome/fontawesome-svg-core';
 import { Meta, StoryObj } from '@storybook/angular';
 import IconComponent from './icon.component';
 import { moduleMetadata } from '@storybook/angular';
@@ -19,11 +19,32 @@ export default {
   tags: ['autodocs'],
   argTypes: {
     faIcon: {
-      control: {
-        type: 'select',
-        options: faIconsList.map(icon => icon.value.iconName),
+      if: { arg: 'showFaIcon' },
+      options: faIconsList.map(option => option.label),
+      control: { type: 'select' },
+      mapping: faIconsList.reduce<{ [key: string]: IconDefinition }>((acc, cur) => {
+        acc[cur.label] = cur.value;
+        return acc;
+      }, {}),
+      onchange: (faIconName: string | IconDefinition) => {
+        let faIcon: IconDefinition;
+        let faPrefix: IconPrefix;
+        let faIdentifier: IconName;
+        if (typeof faIconName === 'string') {
+          const option = faIconsList.find(option => option.label === faIconName);
+          if (!option) throw new Error(`Icon "${faIconName}" not found.`);
+          faIcon = option.value;
+          faPrefix = option.value.prefix;
+          faIdentifier = option.value.iconName;
+        } else {
+          faIcon = faIconName;
+        }
+        return {
+          faPrefix: faIcon.prefix,
+          faIdentifier: faIcon.iconName,
+          faIcon: faIcon.icon,
+        };
       },
-      mapping: Object.fromEntries(faIconsList.map(icon => [icon.value.iconName, icon.value])),
     },
     showFaIcon: { control: 'boolean' },
     showSvgIcon: { control: 'boolean' },
@@ -34,16 +55,14 @@ export default {
         options: ['light', 'thin', 'regular', 'solid']
       },
     },
-    faIconSize: {
-      control: {
-        type: 'select',
-        options: ['xs', 'sm', 'lg', '1x', '2x', '3x', '4x', '5x', '6x', '7x', '8x', '9x', '10x']
-      },
-    },
+    faIconSize:
+      { control: 'number' }
+    ,
     iconWidth: { control: 'number' },
     iconHeight: { control: 'number' },
-    ariaLabelIcon: { control: 'text' },
+    ariaLabel: { control: 'text' },
     altText: { control: 'text' },
+    faIconAriaLabel: { control: 'text'},
   },
 } as Meta<IconComponent>;
 
@@ -55,11 +74,11 @@ export const Default: Story = {
     showFaIcon: true,
     showSvgIcon: false,
     faIconWeight: 'regular',
-    faIconSize: '1x',
+    faIconSize: 24,
     iconWidth: 24,
     iconHeight: 24,
-    ariaLabelIcon: 'Case',
-    altText: 'Case',
+    ariaLabel: '',
+    altText: '',
     svgIconSrc: svg,
   },
 };

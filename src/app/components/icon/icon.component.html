@@ -4,8 +4,8 @@
      }" role="img" [attr.aria-label]="ariaLabelContainer">
 
   <!-- Font Awesome Icon -->
-  <fa-icon *ngIf="showFaIcon" [icon]="faIcon" [ngClass]="getFontAwesomeIcon()" [attr.aria-label]="ariaLabel"
-    [attr.alt]="altText" [style.width.px]="iconWidth" [style.height.px]="iconHeight">
+  <fa-icon *ngIf="showFaIcon" [icon]="faIcon" [ngClass]="getFontAwesomeIcon()"  [attr.aria-label]="ariaLabel"
+    [attr.alt]="altText" [ngStyle]="{'font-size.px': faIconSize}">
   </fa-icon>
 
   <!-- SVG Icon -->

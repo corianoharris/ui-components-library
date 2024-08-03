@@ -592,7 +592,7 @@
         },
         {
             "name": "IconComponent",
-            "id": "component-IconComponent-d3b7079a9accc0b3c3667e0105f41bc86b37b6264791676a2c963703d2bcabcb3ab443b5c702d461c628ee6c717a4d18f91fc5e33e1e18c1d97bb2f5f451d3e4",
+            "id": "component-IconComponent-a66a953380b77e62e95b3f4ebbab32da2c1b38a13435663d3ef43a90d1e55df1724c55a12c87a7ebe53f7d45911eb2e0267d3e5945d08abef5e0f53e8269b5f1",
             "file": "src/app/components/icon/icon.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -615,7 +615,7 @@
                     "defaultValue": "''",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 22,
+                    "line": 23,
                     "type": "string",
                     "decorators": []
                 },
@@ -624,21 +624,12 @@
                     "defaultValue": "''",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 24,
+                    "line": 22,
                     "type": "string",
                     "decorators": []
                 },
                 {
                     "name": "ariaLabelContainer",
-                    "defaultValue": "''",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 20,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "ariaLabelIcon",
                     "defaultValue": "''",
                     "deprecated": false,
                     "deprecationMessage": "",
@@ -657,11 +648,11 @@
                 },
                 {
                     "name": "faIconSize",
-                    "defaultValue": "'1x'",
+                    "defaultValue": "24",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "line": 25,
-                    "type": "\"xs\" | \"sm\" | \"lg\" | \"1x\" | \"2x\" | \"3x\" | \"4x\" | \"5x\" | \"6x\" | \"7x\" | \"8x\" | \"9x\" | \"10x\"",
+                    "type": "number",
                     "decorators": []
                 },
                 {
@@ -714,7 +705,7 @@
                     "defaultValue": "''",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 23,
+                    "line": 24,
                     "type": "string",
                     "decorators": []
                 },
@@ -732,49 +723,32 @@
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 19,
+                    "line": 20,
                     "type": "boolean",
                     "decorators": []
                 }
             ],
             "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [
+            "propertiesClass": [
                 {
-                    "name": "getFaIconLabel",
-                    "args": [
-                        {
-                            "name": "faIconValue",
-                            "type": "IconDefinition",
-                            "deprecated": false,
-                            "deprecationMessage": ""
-                        }
-                    ],
-                    "optional": false,
-                    "returnType": "string",
-                    "typeParameters": [],
-                    "line": 42,
+                    "name": "faIconAriaLabel",
+                    "defaultValue": "''",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "jsdoctags": [
-                        {
-                            "name": "faIconValue",
-                            "type": "IconDefinition",
-                            "deprecated": false,
-                            "deprecationMessage": "",
-                            "tagName": {
-                                "text": "param"
-                            }
-                        }
-                    ]
-                },
+                    "type": "string | undefined",
+                    "optional": false,
+                    "description": "",
+                    "line": 45
+                }
+            ],
+            "methodsClass": [
                 {
                     "name": "getFontAwesomeIcon",
                     "args": [],
                     "optional": false,
                     "returnType": "string",
                     "typeParameters": [],
-                    "line": 47,
+                    "line": 67,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -784,7 +758,45 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 36,
+                    "line": 37,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "stripFaPrefix",
+                    "args": [
+                        {
+                            "name": "iconName",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "string",
+                    "typeParameters": [],
+                    "line": 56,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "iconName",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "updateAriaLabel",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 49,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -807,11 +819,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input, NO_ERRORS_SCHEMA, OnInit } from '@angular/core';\nimport { FontAwesomeModule } from '@fortawesome/angular-fontawesome';\nimport { IconDefinition } from '@fortawesome/free-solid-svg-icons';\nimport { faIconsList } from './icons';\nimport { faQuestion } from '@fortawesome/free-solid-svg-icons';\nimport { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';\nimport { IconComponentProps } from './icon.types';\n\n@Component({\n  selector: 'icon',\n  standalone: true,\n  schemas: [NO_ERRORS_SCHEMA],\n  imports: [CommonModule, FontAwesomeModule],\n  templateUrl: './icon.component.html',\n  styleUrls: ['./icon.component.css']\n})\nexport default class IconComponent implements IconComponentProps {\n  @Input() useDefaultAria? = false;\n  @Input() ariaLabelContainer? = '';\n  @Input() ariaLabelIcon = '';\n  @Input() altText = '';\n  @Input() srOnlyContent? = '';\n  @Input() ariaLabel = '';\n  @Input() faIconSize: 'xs' | 'sm' | 'lg' | '1x' | '2x' | '3x' | '4x' | '5x' | '6x' | '7x' | '8x' | '9x' | '10x' = '1x';\n  @Input() iconHeight? = 24;\n  @Input() iconWidth? = 24;\n  @Input() showFaIcon? = false;\n  @Input() faIcon: IconDefinition = faQuestion;\n  @Input() showSvgIcon? = false;\n  @Input() svgIconSrc?: SafeResourceUrl | string = \"/icons/rocket.svg\";\n  @Input() faIconWeight: 'light' | 'thin' | 'regular' | 'solid' = 'regular';\n\n  constructor(private _sanitizer: DomSanitizer) {}\n\n  ngOnInit(): void {\n    if (typeof this.svgIconSrc === 'string') {\n      this.svgIconSrc = this._sanitizer.bypassSecurityTrustResourceUrl(\"/icons/rocket.svg\");\n    }\n  }\n\n  getFaIconLabel(faIconValue: IconDefinition): string {\n    const icon = faIconsList.find(i => i.value === faIconValue);\n    return icon ? icon.label : faQuestion.iconName;\n  }\n\n  getFontAwesomeIcon(): string {\n    let weightClass = '';\n\n    switch (this.faIconWeight) {\n      case 'light':\n        weightClass = 'fal'; // Font Awesome Light\n        break;\n      case 'thin':\n        weightClass = 'fat'; // Font Awesome Thin\n        break;\n      case 'regular':\n        weightClass = 'far'; // Font Awesome Regular\n        break;\n      case 'solid':\n        weightClass = 'fas'; // Font Awesome Solid\n        break;\n    }\n\n    return `${weightClass} fa-${this.faIcon?.iconName} fa-${this.faIconSize}`;\n  }\n}\n",
+            "sourceCode": "import { IconName } from '@fortawesome/fontawesome-svg-core';\nimport { CommonModule } from '@angular/common';\nimport { Component, Input, NO_ERRORS_SCHEMA, OnInit, SimpleChanges } from '@angular/core';\nimport { FontAwesomeModule } from '@fortawesome/angular-fontawesome';\nimport { IconDefinition } from '@fortawesome/free-solid-svg-icons';\nimport { faIconsList } from './icons';\nimport { faQuestion } from '@fortawesome/free-solid-svg-icons';\nimport { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';\nimport { IconComponentProps } from './icon.types';\n\n@Component({\n  selector: 'icon',\n  standalone: true,\n  schemas: [NO_ERRORS_SCHEMA],\n  imports: [CommonModule, FontAwesomeModule],\n  templateUrl: './icon.component.html',\n  styleUrls: ['./icon.component.css']\n})\nexport default class IconComponent implements IconComponentProps {\n  @Input() useDefaultAria? = false;\n  @Input() ariaLabelContainer? = '';\n  @Input() ariaLabel? = '';\n  @Input() altText = '';\n  @Input() srOnlyContent? = '';\n  @Input() faIconSize = 24;\n  @Input() iconHeight? = 24;\n  @Input() iconWidth? = 24;\n  @Input() showFaIcon? = false;\n  @Input() faIcon: IconDefinition = faQuestion;\n  @Input() showSvgIcon? = false;\n  @Input() svgIconSrc?: SafeResourceUrl | string = \"/icons/rocket.svg\";\n  @Input() faIconWeight: 'light' | 'thin' | 'regular' | 'solid' = 'regular';\n\n  constructor(private _sanitizer: DomSanitizer) {}\n\n\n  ngOnInit(): void {\n    if (typeof this.svgIconSrc === 'string') {\n      this.svgIconSrc = this._sanitizer.bypassSecurityTrustResourceUrl(\"/icons/rocket.svg\");\n    }\n\n    this.updateAriaLabel();\n  }\n\n  faIconAriaLabel: string | undefined = '';\n  \n\n // Method to update the ariaLabel variable\n updateAriaLabel(): void {\n  if (this.faIcon && this.faIcon.iconName) {\n    this.faIconAriaLabel = this.stripFaPrefix(this.faIcon.iconName);\n  }\n}\n\n// Function to strip 'fa-' prefix from icon name\nstripFaPrefix(iconName: string): string {\n  // Remove 'fa-' prefix if present\n  return iconName.replace(/^fa-/, '');\n}\n//   // Function to get ariaLabel based on icon name\n// getAriaLabel(iconName: string): string | undefined {\n//   const iconItem = faIconsList.find(item => item.icon === iconName);\n//   return iconItem ? iconItem.label : undefined;\n// }\n \n\n  getFontAwesomeIcon(): string {\n    let weightClass = '';\n\n    switch (this.faIconWeight) {\n      case 'light':\n        weightClass = 'fal'; // Font Awesome Light\n        break;\n      case 'thin':\n        weightClass = 'fat'; // Font Awesome Thin\n        break;\n      case 'regular':\n        weightClass = 'far'; // Font Awesome Regular\n        break;\n      case 'solid':\n        weightClass = 'fas'; // Font Awesome Solid\n        break;\n    }\n\n    return `${weightClass} fa-${this.faIcon?.iconName} fa-${this.faIconSize}`;\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".icon-container {\n    display: inline-block;\n    align-items: center;\n    justify-content: center;\n    margin: 0 10px;\n    height: max-content;\n}\n\n.svg-icon {\n    height: 24px;\n    width: 24px;\n}\n",
+                    "data": ".icon-container {\n    display: inline-block;\n    align-items: center;\n    justify-content: center;\n    margin: 0 10px;\n}\n\n.svg-icon {\n    height: 100%;\n    width: 100%;\n}\n\n.icon-container fa-icon {\n    width: 100%;\n      height: 100%;\n      font-size: inherit;\n}\n",
                     "styleUrl": "./icon.component.css"
                 }
             ],
@@ -846,7 +858,7 @@
             "implements": [
                 "IconComponentProps"
             ],
-            "templateData": "<div class=\"icon-container\" [ngStyle]=\"{\n       'height': iconHeight + 'px',\n       'width': iconWidth + 'px'\n     }\" role=\"img\" [attr.aria-label]=\"ariaLabelContainer\">\n\n  <!-- Font Awesome Icon -->\n  <fa-icon *ngIf=\"showFaIcon\" [icon]=\"faIcon\" [ngClass]=\"getFontAwesomeIcon()\" [attr.aria-label]=\"ariaLabel\"\n    [attr.alt]=\"altText\" [style.width.px]=\"iconWidth\" [style.height.px]=\"iconHeight\">\n  </fa-icon>\n\n  <!-- SVG Icon -->\n  <img *ngIf=\"showSvgIcon && svgIconSrc\" [src]=\"svgIconSrc\" [attr.alt]=\"altText\" [style.width.px]=\"iconWidth\"\n    [style.height.px]=\"iconHeight\">\n\n  <!-- Screen Reader Content -->\n  <span *ngIf=\"!useDefaultAria\" class=\"sr-content\" [ngStyle]=\"{'textAlign': 'center'}\">\n    {{srOnlyContent}}\n  </span>\n</div>"
+            "templateData": "<div class=\"icon-container\" [ngStyle]=\"{\n       'height': iconHeight + 'px',\n       'width': iconWidth + 'px'\n     }\" role=\"img\" [attr.aria-label]=\"ariaLabelContainer\">\n\n  <!-- Font Awesome Icon -->\n  <fa-icon *ngIf=\"showFaIcon\" [icon]=\"faIcon\" [ngClass]=\"getFontAwesomeIcon()\"  [attr.aria-label]=\"faIconAriaLabel\"\n    [attr.alt]=\"altText\" [ngStyle]=\"{'font-size.px': faIconSize}\">\n  </fa-icon>\n\n  <!-- SVG Icon -->\n  <img *ngIf=\"showSvgIcon && svgIconSrc\" [src]=\"svgIconSrc\" [attr.alt]=\"altText\" [style.width.px]=\"iconWidth\"\n    [style.height.px]=\"iconHeight\">\n\n  <!-- Screen Reader Content -->\n  <span *ngIf=\"!useDefaultAria\" class=\"sr-content\" [ngStyle]=\"{'textAlign': 'center'}\">\n    {{srOnlyContent}}\n  </span>\n</div>"
         },
         {
             "name": "PageComponent",
@@ -1646,7 +1658,7 @@
                 "linktype": "component",
                 "name": "IconComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/19",
+                "coverageCount": "0/20",
                 "status": "low"
             },
             {

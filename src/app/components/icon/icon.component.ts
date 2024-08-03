@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, NO_ERRORS_SCHEMA, OnInit } from '@angular/core';
+import { Component, Input, NO_ERRORS_SCHEMA, OnInit, SimpleChanges } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { faIconsList } from './icons';
@@ -18,11 +18,10 @@ import { IconComponentProps } from './icon.types';
 export default class IconComponent implements IconComponentProps {
   @Input() useDefaultAria? = false;
   @Input() ariaLabelContainer? = '';
-  @Input() ariaLabelIcon = '';
+  @Input() ariaLabel? = '';
   @Input() altText = '';
   @Input() srOnlyContent? = '';
-  @Input() ariaLabel = '';
-  @Input() faIconSize: 'xs' | 'sm' | 'lg' | '1x' | '2x' | '3x' | '4x' | '5x' | '6x' | '7x' | '8x' | '9x' | '10x' = '1x';
+  @Input() faIconSize = 24;
   @Input() iconHeight? = 24;
   @Input() iconWidth? = 24;
   @Input() showFaIcon? = false;
@@ -33,16 +32,20 @@ export default class IconComponent implements IconComponentProps {
 
   constructor(private _sanitizer: DomSanitizer) {}
 
+
   ngOnInit(): void {
     if (typeof this.svgIconSrc === 'string') {
       this.svgIconSrc = this._sanitizer.bypassSecurityTrustResourceUrl("/icons/rocket.svg");
     }
   }
 
-  getFaIconLabel(faIconValue: IconDefinition): string {
-    const icon = faIconsList.find(i => i.value === faIconValue);
-    return icon ? icon.label : faQuestion.iconName;
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['faIcon']) {
+      this.ariaLabel = this.faIcon.iconName
+    }
   }
+
+  
 
   getFontAwesomeIcon(): string {
     let weightClass = '';
