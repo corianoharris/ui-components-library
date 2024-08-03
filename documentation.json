@@ -502,7 +502,7 @@
             "isDuplicate": true,
             "duplicateId": 1,
             "duplicateName": "ButtonComponent-1",
-            "templateData": "<button class=\"button\" [type]=\"type\" [ngClass]=\"classes\" (click)=\"handleClick($event)\" [disabled]=\"isDisabled\"\n  [attr.aria-label]=\"text\">\n  <div class=\"button__wrapper\">\n    <div class=\"button__icon-wrapper\" *ngIf=\"showIconLeft\">\n      <fa-icon *ngIf=\"showFaIconLeft && !showSvgIconLeft\" class=\"button__icon\" [icon]=\"getIcon(faIconLeft)\">\n      </fa-icon>\n      <img *ngIf=\"showSvgIconLeft && !showFaIconLeft\" class=\"button__icon\" [src]=\"svgIconLeft\" alt=\"\">\n    </div>\n    <span class=\"button__text\" *ngIf=\"text\">{{ text }}</span>\n    <div class=\"button__icon-wrapper\" *ngIf=\"showIconRight\">\n      <fa-icon *ngIf=\"showFaIconRight && !showSvgIconRight\" class=\"button__icon\" [icon]=\"getIcon(faIconRight)\">\n      </fa-icon>\n      <img *ngIf=\"showSvgIconRight && !showFaIconRight\" class=\"button__icon\" [src]=\"svgIconRight\" alt=\"\">\n    </div>\n  </div>\n</button>"
+            "templateData": "<button class=\"button\" [type]=\"type\" [ngClass]=\"classes\" (click)=\"handleClick($event)\" [disabled]=\"isDisabled\"\n  [attr.aria-label]=\"text\">\n  <div class=\"button__wrapper\">\n    <div class=\"button__icon-wrapper\" *ngIf=\"showIconLeft\">\n      <fa-icon *ngIf=\"showFaIconLeft && !showSvgIconLeft\" class=\"button__icon\" [icon]=\"faIconLeft\">\n      </fa-icon>\n      <img *ngIf=\"showSvgIconLeft && !showFaIconLeft\" class=\"button__icon\" [src]=\"svgIconLeft\" alt=\"\">\n    </div>\n    <span class=\"button__text\" *ngIf=\"text\">{{ text }}</span>\n    <div class=\"button__icon-wrapper\" *ngIf=\"showIconRight\">\n      <fa-icon *ngIf=\"showFaIconRight && !showSvgIconRight\" class=\"button__icon\" [icon]=\"faIconRight\">\n      </fa-icon>\n      <img *ngIf=\"showSvgIconRight && !showFaIconRight\" class=\"button__icon\" [src]=\"svgIconRight\" alt=\"\">\n    </div>\n  </div>\n</button>"
         },
         {
             "name": "HeaderComponent",
@@ -592,7 +592,7 @@
         },
         {
             "name": "IconComponent",
-            "id": "component-IconComponent-a66a953380b77e62e95b3f4ebbab32da2c1b38a13435663d3ef43a90d1e55df1724c55a12c87a7ebe53f7d45911eb2e0267d3e5945d08abef5e0f53e8269b5f1",
+            "id": "component-IconComponent-3cbc271dbf65025e598595a47c925642924effeee2d64c295aa40e46e23a9c56d64eb5f7edec60c937fb735d439d6cf4c8eeb572780b858b36ff0f54d8524439",
             "file": "src/app/components/icon/icon.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -615,7 +615,7 @@
                     "defaultValue": "''",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 23,
+                    "line": 22,
                     "type": "string",
                     "decorators": []
                 },
@@ -624,7 +624,7 @@
                     "defaultValue": "''",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 22,
+                    "line": 21,
                     "type": "string",
                     "decorators": []
                 },
@@ -633,7 +633,7 @@
                     "defaultValue": "''",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 21,
+                    "line": 20,
                     "type": "string",
                     "decorators": []
                 },
@@ -642,7 +642,7 @@
                     "defaultValue": "faQuestion",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 29,
+                    "line": 28,
                     "type": "IconDefinition",
                     "decorators": []
                 },
@@ -651,7 +651,7 @@
                     "defaultValue": "24",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 25,
+                    "line": 24,
                     "type": "number",
                     "decorators": []
                 },
@@ -660,7 +660,7 @@
                     "defaultValue": "'regular'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 32,
+                    "line": 31,
                     "type": "\"light\" | \"thin\" | \"regular\" | \"solid\"",
                     "decorators": []
                 },
@@ -669,7 +669,7 @@
                     "defaultValue": "24",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 26,
+                    "line": 25,
                     "type": "number",
                     "decorators": []
                 },
@@ -678,7 +678,7 @@
                     "defaultValue": "24",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 27,
+                    "line": 26,
                     "type": "number",
                     "decorators": []
                 },
@@ -687,7 +687,7 @@
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 28,
+                    "line": 27,
                     "type": "boolean",
                     "decorators": []
                 },
@@ -696,7 +696,7 @@
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 30,
+                    "line": 29,
                     "type": "boolean",
                     "decorators": []
                 },
@@ -705,7 +705,7 @@
                     "defaultValue": "''",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 24,
+                    "line": 23,
                     "type": "string",
                     "decorators": []
                 },
@@ -714,7 +714,7 @@
                     "defaultValue": "\"/icons/rocket.svg\"",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 31,
+                    "line": 30,
                     "type": "SafeResourceUrl | string",
                     "decorators": []
                 },
@@ -723,24 +723,13 @@
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 20,
+                    "line": 19,
                     "type": "boolean",
                     "decorators": []
                 }
             ],
             "outputsClass": [],
-            "propertiesClass": [
-                {
-                    "name": "faIconAriaLabel",
-                    "defaultValue": "''",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string | undefined",
-                    "optional": false,
-                    "description": "",
-                    "line": 45
-                }
-            ],
+            "propertiesClass": [],
             "methodsClass": [
                 {
                     "name": "getFontAwesomeIcon",
@@ -748,40 +737,30 @@
                     "optional": false,
                     "returnType": "string",
                     "typeParameters": [],
-                    "line": 67,
+                    "line": 50,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
                 {
-                    "name": "ngOnInit",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 37,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                },
-                {
-                    "name": "stripFaPrefix",
+                    "name": "ngOnChanges",
                     "args": [
                         {
-                            "name": "iconName",
-                            "type": "string",
+                            "name": "changes",
+                            "type": "SimpleChanges",
                             "deprecated": false,
                             "deprecationMessage": ""
                         }
                     ],
                     "optional": false,
-                    "returnType": "string",
+                    "returnType": "void",
                     "typeParameters": [],
-                    "line": 56,
+                    "line": 42,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
                         {
-                            "name": "iconName",
-                            "type": "string",
+                            "name": "changes",
+                            "type": "SimpleChanges",
                             "deprecated": false,
                             "deprecationMessage": "",
                             "tagName": {
@@ -791,12 +770,12 @@
                     ]
                 },
                 {
-                    "name": "updateAriaLabel",
+                    "name": "ngOnInit",
                     "args": [],
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 49,
+                    "line": 36,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -819,7 +798,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { IconName } from '@fortawesome/fontawesome-svg-core';\nimport { CommonModule } from '@angular/common';\nimport { Component, Input, NO_ERRORS_SCHEMA, OnInit, SimpleChanges } from '@angular/core';\nimport { FontAwesomeModule } from '@fortawesome/angular-fontawesome';\nimport { IconDefinition } from '@fortawesome/free-solid-svg-icons';\nimport { faIconsList } from './icons';\nimport { faQuestion } from '@fortawesome/free-solid-svg-icons';\nimport { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';\nimport { IconComponentProps } from './icon.types';\n\n@Component({\n  selector: 'icon',\n  standalone: true,\n  schemas: [NO_ERRORS_SCHEMA],\n  imports: [CommonModule, FontAwesomeModule],\n  templateUrl: './icon.component.html',\n  styleUrls: ['./icon.component.css']\n})\nexport default class IconComponent implements IconComponentProps {\n  @Input() useDefaultAria? = false;\n  @Input() ariaLabelContainer? = '';\n  @Input() ariaLabel? = '';\n  @Input() altText = '';\n  @Input() srOnlyContent? = '';\n  @Input() faIconSize = 24;\n  @Input() iconHeight? = 24;\n  @Input() iconWidth? = 24;\n  @Input() showFaIcon? = false;\n  @Input() faIcon: IconDefinition = faQuestion;\n  @Input() showSvgIcon? = false;\n  @Input() svgIconSrc?: SafeResourceUrl | string = \"/icons/rocket.svg\";\n  @Input() faIconWeight: 'light' | 'thin' | 'regular' | 'solid' = 'regular';\n\n  constructor(private _sanitizer: DomSanitizer) {}\n\n\n  ngOnInit(): void {\n    if (typeof this.svgIconSrc === 'string') {\n      this.svgIconSrc = this._sanitizer.bypassSecurityTrustResourceUrl(\"/icons/rocket.svg\");\n    }\n\n    this.updateAriaLabel();\n  }\n\n  faIconAriaLabel: string | undefined = '';\n  \n\n // Method to update the ariaLabel variable\n updateAriaLabel(): void {\n  if (this.faIcon && this.faIcon.iconName) {\n    this.faIconAriaLabel = this.stripFaPrefix(this.faIcon.iconName);\n  }\n}\n\n// Function to strip 'fa-' prefix from icon name\nstripFaPrefix(iconName: string): string {\n  // Remove 'fa-' prefix if present\n  return iconName.replace(/^fa-/, '');\n}\n//   // Function to get ariaLabel based on icon name\n// getAriaLabel(iconName: string): string | undefined {\n//   const iconItem = faIconsList.find(item => item.icon === iconName);\n//   return iconItem ? iconItem.label : undefined;\n// }\n \n\n  getFontAwesomeIcon(): string {\n    let weightClass = '';\n\n    switch (this.faIconWeight) {\n      case 'light':\n        weightClass = 'fal'; // Font Awesome Light\n        break;\n      case 'thin':\n        weightClass = 'fat'; // Font Awesome Thin\n        break;\n      case 'regular':\n        weightClass = 'far'; // Font Awesome Regular\n        break;\n      case 'solid':\n        weightClass = 'fas'; // Font Awesome Solid\n        break;\n    }\n\n    return `${weightClass} fa-${this.faIcon?.iconName} fa-${this.faIconSize}`;\n  }\n}\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input, NO_ERRORS_SCHEMA, OnInit, SimpleChanges } from '@angular/core';\nimport { FontAwesomeModule } from '@fortawesome/angular-fontawesome';\nimport { IconDefinition } from '@fortawesome/free-solid-svg-icons';\nimport { faIconsList } from './icons';\nimport { faQuestion } from '@fortawesome/free-solid-svg-icons';\nimport { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';\nimport { IconComponentProps } from './icon.types';\n\n@Component({\n  selector: 'icon',\n  standalone: true,\n  schemas: [NO_ERRORS_SCHEMA],\n  imports: [CommonModule, FontAwesomeModule],\n  templateUrl: './icon.component.html',\n  styleUrls: ['./icon.component.css']\n})\nexport default class IconComponent implements IconComponentProps {\n  @Input() useDefaultAria? = false;\n  @Input() ariaLabelContainer? = '';\n  @Input() ariaLabel? = '';\n  @Input() altText = '';\n  @Input() srOnlyContent? = '';\n  @Input() faIconSize = 24;\n  @Input() iconHeight? = 24;\n  @Input() iconWidth? = 24;\n  @Input() showFaIcon? = false;\n  @Input() faIcon: IconDefinition = faQuestion;\n  @Input() showSvgIcon? = false;\n  @Input() svgIconSrc?: SafeResourceUrl | string = \"/icons/rocket.svg\";\n  @Input() faIconWeight: 'light' | 'thin' | 'regular' | 'solid' = 'regular';\n\n  constructor(private _sanitizer: DomSanitizer) {}\n\n\n  ngOnInit(): void {\n    if (typeof this.svgIconSrc === 'string') {\n      this.svgIconSrc = this._sanitizer.bypassSecurityTrustResourceUrl(\"/icons/rocket.svg\");\n    }\n  }\n\n  ngOnChanges(changes: SimpleChanges): void {\n    if (changes['faIcon']) {\n      this.ariaLabel = this.faIcon.iconName\n    }\n  }\n\n  \n\n  getFontAwesomeIcon(): string {\n    let weightClass = '';\n\n    switch (this.faIconWeight) {\n      case 'light':\n        weightClass = 'fal'; // Font Awesome Light\n        break;\n      case 'thin':\n        weightClass = 'fat'; // Font Awesome Thin\n        break;\n      case 'regular':\n        weightClass = 'far'; // Font Awesome Regular\n        break;\n      case 'solid':\n        weightClass = 'fas'; // Font Awesome Solid\n        break;\n    }\n\n    return `${weightClass} fa-${this.faIcon?.iconName} fa-${this.faIconSize}`;\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -841,7 +820,7 @@
                         "deprecationMessage": ""
                     }
                 ],
-                "line": 32,
+                "line": 31,
                 "jsdoctags": [
                     {
                         "name": "_sanitizer",
@@ -858,7 +837,7 @@
             "implements": [
                 "IconComponentProps"
             ],
-            "templateData": "<div class=\"icon-container\" [ngStyle]=\"{\n       'height': iconHeight + 'px',\n       'width': iconWidth + 'px'\n     }\" role=\"img\" [attr.aria-label]=\"ariaLabelContainer\">\n\n  <!-- Font Awesome Icon -->\n  <fa-icon *ngIf=\"showFaIcon\" [icon]=\"faIcon\" [ngClass]=\"getFontAwesomeIcon()\"  [attr.aria-label]=\"faIconAriaLabel\"\n    [attr.alt]=\"altText\" [ngStyle]=\"{'font-size.px': faIconSize}\">\n  </fa-icon>\n\n  <!-- SVG Icon -->\n  <img *ngIf=\"showSvgIcon && svgIconSrc\" [src]=\"svgIconSrc\" [attr.alt]=\"altText\" [style.width.px]=\"iconWidth\"\n    [style.height.px]=\"iconHeight\">\n\n  <!-- Screen Reader Content -->\n  <span *ngIf=\"!useDefaultAria\" class=\"sr-content\" [ngStyle]=\"{'textAlign': 'center'}\">\n    {{srOnlyContent}}\n  </span>\n</div>"
+            "templateData": "<div class=\"icon-container\" [ngStyle]=\"{\n       'height': iconHeight + 'px',\n       'width': iconWidth + 'px'\n     }\" role=\"img\" [attr.aria-label]=\"ariaLabelContainer\">\n\n  <!-- Font Awesome Icon -->\n  <fa-icon *ngIf=\"showFaIcon\" [icon]=\"faIcon\" [ngClass]=\"getFontAwesomeIcon()\"  [attr.aria-label]=\"ariaLabel\"\n    [attr.alt]=\"altText\" [ngStyle]=\"{'font-size.px': faIconSize}\">\n  </fa-icon>\n\n  <!-- SVG Icon -->\n  <img *ngIf=\"showSvgIcon && svgIconSrc\" [src]=\"svgIconSrc\" [attr.alt]=\"altText\" [style.width.px]=\"iconWidth\"\n    [style.height.px]=\"iconHeight\">\n\n  <!-- Screen Reader Content -->\n  <span *ngIf=\"!useDefaultAria\" class=\"sr-content\" [ngStyle]=\"{'textAlign': 'center'}\">\n    {{srOnlyContent}}\n  </span>\n</div>"
         },
         {
             "name": "PageComponent",
@@ -1658,7 +1637,7 @@
                 "linktype": "component",
                 "name": "IconComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/20",
+                "coverageCount": "0/18",
                 "status": "low"
             },
             {

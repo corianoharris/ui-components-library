@@ -28,7 +28,7 @@ export class ButtonComponent implements ButtonProps {
   @Input() isText?: boolean;
   @Input() showIconLeft?: boolean;
   @Input() showIconRight?: boolean;
-  @Input() svgIconLeft?: SafeResourceUrl | undefined = "/assets/icons/rocket.svg";
+  @Input() svgIconLeft?: SafeResourceUrl | undefined = "icons/rocket.svg";
   @Input() svgIconRight?: SafeResourceUrl  | undefined = "https://dev.w3.org/SVG/tools/svgweb/samples/svg-files/osa.svg";
   @Input() size: ButtonSize = 'medium';
   @Input() isDisabled: boolean = false;
