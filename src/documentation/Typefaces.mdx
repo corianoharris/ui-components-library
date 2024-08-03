@@ -1,0 +1,159 @@
+import { Meta, Typeset } from '@storybook/blocks';
+
+<Meta title="Brand Identity/Typography/Typefaces" />
+
+<style>
+  {`
+
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 15px;
+    width: 100%;
+    margin: 20px 0 40px 0;
+    padding: 10px 15px;
+    color: purple
+   }
+
+   .nav-items {
+      color: white;
+      background-color: purple;
+      padding: 10px;
+      border-radius: 5px;
+   }
+
+   .nav-items:hover {
+      color: purple;
+      background-color: white;
+      border: 1px solid purple;
+  
+   }
+
+   #Roboto, #Montserrat {
+    margin: 25px 0;
+    padding-top: 20px;
+   }
+   
+  `}
+</style>
+
+
+export const typographyRoboto = {
+  type: {
+    primary: '"Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif',
+  },
+  weight: {
+    thin: '100',
+    light: '300',
+    regular: '400',
+    medium: '500',
+    bold: '700',
+    black: '900',
+  },
+  size: {
+    s1: 12,
+    s2: 14,
+    s3: 16,
+    m1: 20,
+    m2: 24,
+    m3: 28,
+    l1: 32,
+    l2: 40,
+    l3: 48,
+  },
+};
+
+export const typographyMontserrat = {
+  type: {
+    primary: '"Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif',
+  },
+  weight: {
+    thin: '100',
+    light: '300',
+    regular: '400',
+    medium: '500',
+    bold: '700',
+    black: '900',
+  },
+  size: {
+    s1: 12,
+    s2: 14,
+    s3: 16,
+    m1: 20,
+    m2: 24,
+    m3: 28,
+    l1: 32,
+    l2: 40,
+    l3: 48,
+  },
+};
+
+export const SampleText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+
+
+# Typefaces
+
+<div id="Roboto">
+
+**[To Montserrat](#Montserrat)**
+
+  ## **Font:** Roboto
+
+###### Download Google Roboto font here: [Google Roboto Font](https://fonts.google.com/specimen/Roboto)
+
+**Weights:** 100(thin), 300(light), 400(regular), medium(500), 700(bold), 900(black)
+
+<Typeset
+  fontSizes={[
+    Number(typographyRoboto.size.s1),
+    Number(typographyRoboto.size.s2),
+    Number(typographyRoboto.size.s3),
+    Number(typographyRoboto.size.m1),
+    Number(typographyRoboto.size.m2),
+    Number(typographyRoboto.size.m3),
+    Number(typographyRoboto.size.l1),
+    Number(typographyRoboto.size.l2),
+    Number(typographyRoboto.size.l3),
+  ]}
+  fontWeight={typographyRoboto.weight.black}
+  sampleText={SampleText}
+  fontFamily={typographyRoboto.type.primary}
+/>
+
+</div>
+
+
+
+
+<div id="Montserrat">
+
+**[Back to Top](#typefaces)**
+
+
+ ## **Font:** Montserrat
+
+###### Download Google Montserrat font here: [Google Montserrat Font](https://fonts.google.com/specimen/Montserrat)
+
+**Weights:** 100(thin), 300(light), 400(regular), medium(500), 700(bold), 900(black)
+
+<Typeset
+  fontSizes={[
+    Number(typographyMontserrat.size.s1),
+    Number(typographyMontserrat.size.s2),
+    Number(typographyMontserrat.size.s3),
+    Number(typographyMontserrat.size.m1),
+    Number(typographyMontserrat.size.m2),
+    Number(typographyMontserrat.size.m3),
+    Number(typographyMontserrat.size.l1),
+    Number(typographyMontserrat.size.l2),
+    Number(typographyMontserrat.size.l3),
+  ]}
+  fontWeight={typographyMontserrat.weight.black}
+  sampleText={SampleText}
+  fontFamily={typographyMontserrat.type.primary}
+/>
+
+</div>

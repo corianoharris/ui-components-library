@@ -23,12 +23,14 @@ export const NoArrow: Story = {
   args: {
     content: 'This is a tooltip with no arrow',
   boxShadow: true,
+  isVisible: true,
   arrowPosition: 'none',
   }
   
 };
 
-export const ArrowLeftCenter: Story = {args: {
+export const ArrowLeftCenter: Story = {
+  args: {
   content: 'This is a tooltip with arrow at left center',
   boxShadow: true,
   arrowPosition: 'left-center',
@@ -39,18 +41,20 @@ export const ArrowLeftTop: Story = { args: {
   boxShadow: true,
   arrowPosition: 'left-top',
 }};
-export const ArrowRightTop: Story = { args: {
+export const ArrowRightTop: Story = { 
+  args: {
   content: 'This is a tooltip with arrow at right top',
   boxShadow: true,
   arrowPosition: 'right-top',
 }};
-export const ArrowRightBottom: Story = { args: {
+export const ArrowRightBottom: Story = { 
+  args: {
   content: 'This is a tooltip with arrow at right bottom',
   boxShadow: true,
   arrowPosition: 'right-bottom',
 }};
 
-export const ArrowLeftBottom: Story ={
+export const ArrowLeftBottom: Story = {
   args: {
     content: 'This is a tooltip with arrow at left bottom',
     boxShadow: true,

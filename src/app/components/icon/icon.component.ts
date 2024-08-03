@@ -5,6 +5,7 @@ import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { faIconsList } from './icons';
 import { faQuestion } from '@fortawesome/free-solid-svg-icons';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { IconComponentProps } from './icon.types';
 
 @Component({
   selector: 'icon',
@@ -14,7 +15,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
   templateUrl: './icon.component.html',
   styleUrls: ['./icon.component.css']
 })
-export default class IconComponent implements OnInit {
+export default class IconComponent implements IconComponentProps {
   @Input() useDefaultAria? = false;
   @Input() ariaLabelContainer? = '';
   @Input() ariaLabelIcon = '';

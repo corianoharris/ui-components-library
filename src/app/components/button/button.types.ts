@@ -4,7 +4,7 @@ import { EventEmitter } from '@angular/core';
 export type ButtonVariant = 'primary' | 'secondary' | 'tertiary' | 'destructive';
 export type ButtonSize = 'small' | 'medium' | 'large';
 
-export interface ButtonProps {
+export type ButtonProps = {
   faIconLeft?: any;
   faIconRight?: any;
   variant: ButtonVariant;
