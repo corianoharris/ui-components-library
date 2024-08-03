@@ -1,0 +1,343 @@
+.tooltip {
+    display: block;
+    padding: 10px;
+    position: relative;
+    background-color: var(--neutrals-white);
+    border: 1px solid var(--neutrals-gray-200);
+    border-radius: 10px;
+    padding: 16px 24px;
+    min-width: 100px;
+    min-height: 100px;
+    max-width: max-content;
+    max-height: max-content;
+    font-family: "Roboto";
+    letter-spacing: 1px;
+    gap: 8px;
+}
+
+.tooltip__title {
+    line-height: 18.8px;
+    font-weight: 600;
+}
+
+.tooltip__content {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 140%;
+    margin: 28px 0;
+}
+
+
+.tooltip--box-shadow {
+    /* use rgba to include everything into one rule */
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.16));
+
+}
+
+/* left arrow positions */
+
+.tooltip__position--left-top::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid var(--neutrals-gray-200);
+}
+
+.tooltip__position--left-top::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: -8px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid var(--neutrals-white);
+}
+
+.tooltip__position--left-center::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -10px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid var(--neutrals-gray-200);
+}
+
+.tooltip__position--left-center::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -8px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid var(--neutrals-white);
+}
+
+.tooltip__position--left-bottom::before {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: -10px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid var(--neutrals-gray-200);
+}
+
+.tooltip__position--left-bottom::after {
+    content: "";
+    position: absolute;
+    bottom: 12px;
+    left: -8px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid var(--neutrals-white);
+}
+
+/* top arrow positions */
+
+.tooltip__position--top-center::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-bottom: 10px solid var(--neutrals-gray-200);
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+}
+
+.tooltip__position--top-center::after {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-bottom: 8px solid var(--neutrals-white);
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+}
+
+.tooltip__position--top-left::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    width: 0;
+    height: 0;
+    border-bottom: 10px solid var(--neutrals-gray-200);
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+}
+
+.tooltip__position--top-left:after {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 12px;
+    width: 0;
+    height: 0;
+    border-bottom: 8px solid var(--neutrals-white);
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+}
+
+.tooltip__position--top-right::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border-bottom: 10px solid var(var(--neutrals-gray-200));
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+}
+
+.tooltip__position--top-right::after {
+    content: "";
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    width: 0;
+    height: 0;
+    border-bottom: 8px solid var(--neutrals-white);
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+}
+
+/* right arrow positions */
+
+.tooltip__position--right-top::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: -10px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid var(--neutrals-gray-200);
+}
+
+.tooltip__position--right-top::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: -8px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid var(--neutrals-white);
+}
+
+.tooltip__position--right-center::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -10px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid var(--neutrals-gray-200);
+}
+
+.tooltip__position--right-center::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -8px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid var(--neutrals-white);
+}
+
+.tooltip__position--right-bottom::before {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    right: -10px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid var(--neutrals-gray-200);
+}
+
+.tooltip__position--right-bottom::after {
+    content: "";
+    position: absolute;
+    bottom: 12px;
+    right: -8px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid var(--neutrals-white);
+}
+
+/* bottom arrow positions */
+
+.tooltip__position--bottom-center:before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-top: 10px solid var(--neutrals-gray-200);
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+}
+
+.tooltip__position--bottom-center:after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-top: 8px solid var(--neutrals-white);
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+}
+
+
+.tooltip__position--bottom-left:before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 10px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid var(--neutrals-gray-200);
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+}
+
+.tooltip__position--bottom-left:after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 12px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid var(--neutrals-white);
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+}
+
+
+.tooltip__position--bottom-right:before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 90%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-top: 10px solid var(--neutrals-gray-200);
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+}
+
+.tooltip__position--bottom-right:after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 90%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-top: 8px solid var(--neutrals-white);
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+}

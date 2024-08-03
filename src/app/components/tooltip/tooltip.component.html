@@ -1,0 +1,13 @@
+
+<div class="tooltip-container">
+    <div data-tooltip-trigger (mouseenter)="showTooltip()" (mouseleave)="hideTooltip()" (focus)="showTooltip()"
+        (blur)="hideTooltip()" [attr.aria-describedby]="tooltipId">
+        
+        
+    </div>
+    <div class="tooltip" [id]="tooltipId" *ngIf="isVisible" [ngClass]="classes" role="tooltip"
+        [attr.data-tooltip-position]="arrowPosition" [attr.aria-hidden]="!isVisible">
+        <h3 class="tooltip__title" *ngIf="title">{{ title }}</h3>
+        <ng-content>{{ content }}</ng-content>
+    </div>
+</div>

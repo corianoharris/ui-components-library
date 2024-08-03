@@ -1108,6 +1108,197 @@
             ],
             "stylesData": "",
             "extends": []
+        },
+        {
+            "name": "TooltipComponent",
+            "id": "component-TooltipComponent-bbab96abb3ade20916be344b4a7a0c5f7a403240889e7a74d61adfdf78eb880670edbacfe3dfa8895c4f99570d69a0138bb967efe80b23483f807b4eefe4ef86",
+            "file": "src/app/components/tooltip/tooltip.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-tooltip",
+            "styleUrls": [
+                "./tooltip.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./tooltip.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "arrowPosition",
+                    "defaultValue": "'left-top'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 18,
+                    "type": "\"left-center\" | \"left-top\" | \"left-bottom\" | \"top-center\" | \"top-left\" | \"top-right\" | \"right-top\" | \"right-center\" | \"right-bottom\" | \"bottom-center\" | \"bottom-left\" | \"bottom-right\" | \"none\"",
+                    "decorators": []
+                },
+                {
+                    "name": "boxShadow",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "content",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 15,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "isVisible",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 17,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "title",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "onMouseEnter",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 25,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "decorators": [
+                        {
+                            "name": "HostListener",
+                            "stringifiedArguments": "'mouseenter'"
+                        }
+                    ],
+                    "modifierKind": [
+                        170
+                    ]
+                },
+                {
+                    "name": "onMouseLeave",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 29,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "decorators": [
+                        {
+                            "name": "HostListener",
+                            "stringifiedArguments": "'mouseleave'"
+                        }
+                    ],
+                    "modifierKind": [
+                        170
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [
+                {
+                    "name": "mouseenter",
+                    "args": [],
+                    "argsDecorator": [],
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 25
+                },
+                {
+                    "name": "mouseleave",
+                    "args": [],
+                    "argsDecorator": [],
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 29
+                }
+            ],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, NO_ERRORS_SCHEMA, OnInit, ElementRef, HostListener } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { TooltipProps } from './tooltip.types';\n\n@Component({\n    selector: 'app-tooltip',\n    standalone: true,\n    imports: [CommonModule],\n    schemas: [NO_ERRORS_SCHEMA],\n    templateUrl: './tooltip.component.html',\n    styleUrls: ['./tooltip.component.css'],\n})\nexport default class TooltipComponent implements TooltipProps {\n    @Input() title?: string = ''\n    @Input() content?: string = ''; // Content to be displayed in the tooltip\n    @Input() boxShadow: boolean = false; \n    @Input() isVisible: boolean = false;// Option to add a box shadow\n    @Input() arrowPosition: 'left-center' | 'left-top' | 'left-bottom' | 'top-center' | 'top-left' | 'top-right' | 'right-top'| 'right-center'| 'right-bottom'| 'bottom-center' | 'bottom-left' | 'bottom-right' | 'none' = 'left-top'; \n\n    \n\n    constructor(private el:ElementRef) {}\n\n\n    @HostListener('mouseenter') onMouseEnter() {\n      this.isVisible = true;\n    }\n  \n    @HostListener('mouseleave') onMouseLeave() {\n      this.isVisible = false;\n    }\n    \n    // Position of the tooltip arrow \n\n    public get classes(): string {\n        let mode = '';\n\n        switch (this.arrowPosition) {\n            case 'left-center':\n                mode = 'left-center';\n                break;\n            case 'left-top':\n                mode = 'left-top';\n                break;\n            case 'left-bottom':\n                mode = 'left-bottom';\n                break;\n            case 'top-center':\n                mode = 'top-center';\n                break;\n            case 'top-left':\n                mode = 'top-left';\n                break;\n            case 'top-right':\n                mode = 'top-right';\n                break;\n            case 'right-top':\n                mode = 'right-top';\n                break;\n            case 'right-center':\n                mode = 'right-center';\n                break;\n            case 'right-bottom':\n                mode = 'right-bottom';\n                break;\n            case 'bottom-center':\n                mode = 'bottom-center';\n                break;\n            case 'bottom-left':\n                mode = 'bottom-left';\n                break;\n            case 'bottom-right':\n                mode = 'bottom-right';\n                break;\n            case 'none':\n                mode = 'none';\n                break;\n            default:\n                mode = ''; // Handle other cases if needed\n                break;\n        }\n\n        // Add the conditional box shadow class if boxShadow is true\n        const boxShadowClass = this.boxShadow ? ' tooltip--box-shadow' : '';\n\n        // Return the combined classes with or without the box shadow class\n        return `tooltip-wrapper tooltip tooltip__position--${mode} ${boxShadowClass}`;\n    }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".tooltip {\n    display: block;\n    padding: 10px;\n    position: relative;\n    background-color: var(--neutrals-white);\n    border: 1px solid var(--neutrals-gray-200);\n    border-radius: 10px;\n    padding: 16px 24px;\n    min-width: 100px;\n    min-height: 100px;\n    max-width: max-content;\n    max-height: max-content;\n    font-family: \"Roboto\";\n    letter-spacing: 1px;\n    gap: 8px;\n}\n\n.tooltip__title {\n    line-height: 18.8px;\n    font-weight: 600;\n}\n\n.tooltip__content {\n    font-size: 14px;\n    font-weight: 300;\n    line-height: 140%;\n    margin: 28px 0;\n}\n\n\n.tooltip--box-shadow {\n    /* use rgba to include everything into one rule */\n    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.16));\n\n}\n\n/* left arrow positions */\n\n.tooltip__position--left-top::before {\n    content: \"\";\n    position: absolute;\n    top: 10px;\n    left: -10px;\n    width: 0;\n    height: 0;\n    border-top: 10px solid transparent;\n    border-bottom: 10px solid transparent;\n    border-right: 10px solid var(--neutrals-gray-200);\n}\n\n.tooltip__position--left-top::after {\n    content: \"\";\n    position: absolute;\n    top: 12px;\n    left: -8px;\n    width: 0;\n    height: 0;\n    border-top: 8px solid transparent;\n    border-bottom: 8px solid transparent;\n    border-right: 8px solid var(--neutrals-white);\n}\n\n.tooltip__position--left-center::before {\n    content: \"\";\n    position: absolute;\n    top: 50%;\n    transform: translateY(-50%);\n    left: -10px;\n    width: 0;\n    height: 0;\n    border-top: 10px solid transparent;\n    border-bottom: 10px solid transparent;\n    border-right: 10px solid var(--neutrals-gray-200);\n}\n\n.tooltip__position--left-center::after {\n    content: \"\";\n    position: absolute;\n    top: 50%;\n    transform: translateY(-50%);\n    left: -8px;\n    width: 0;\n    height: 0;\n    border-top: 8px solid transparent;\n    border-bottom: 8px solid transparent;\n    border-right: 8px solid var(--neutrals-white);\n}\n\n.tooltip__position--left-bottom::before {\n    content: \"\";\n    position: absolute;\n    bottom: 10px;\n    left: -10px;\n    width: 0;\n    height: 0;\n    border-top: 10px solid transparent;\n    border-bottom: 10px solid transparent;\n    border-right: 10px solid var(--neutrals-gray-200);\n}\n\n.tooltip__position--left-bottom::after {\n    content: \"\";\n    position: absolute;\n    bottom: 12px;\n    left: -8px;\n    width: 0;\n    height: 0;\n    border-top: 8px solid transparent;\n    border-bottom: 8px solid transparent;\n    border-right: 8px solid var(--neutrals-white);\n}\n\n/* top arrow positions */\n\n.tooltip__position--top-center::before {\n    content: \"\";\n    position: absolute;\n    top: -10px;\n    left: 50%;\n    transform: translateX(-50%);\n    width: 0;\n    height: 0;\n    border-bottom: 10px solid var(--neutrals-gray-200);\n    border-right: 10px solid transparent;\n    border-left: 10px solid transparent;\n}\n\n.tooltip__position--top-center::after {\n    content: \"\";\n    position: absolute;\n    top: -8px;\n    left: 50%;\n    transform: translateX(-50%);\n    width: 0;\n    height: 0;\n    border-bottom: 8px solid var(--neutrals-white);\n    border-right: 8px solid transparent;\n    border-left: 8px solid transparent;\n}\n\n.tooltip__position--top-left::before {\n    content: \"\";\n    position: absolute;\n    top: -10px;\n    left: 10px;\n    width: 0;\n    height: 0;\n    border-bottom: 10px solid var(--neutrals-gray-200);\n    border-right: 10px solid transparent;\n    border-left: 10px solid transparent;\n}\n\n.tooltip__position--top-left:after {\n    content: \"\";\n    position: absolute;\n    top: -8px;\n    left: 12px;\n    width: 0;\n    height: 0;\n    border-bottom: 8px solid var(--neutrals-white);\n    border-right: 8px solid transparent;\n    border-left: 8px solid transparent;\n}\n\n.tooltip__position--top-right::before {\n    content: \"\";\n    position: absolute;\n    top: -10px;\n    right: 10px;\n    width: 0;\n    height: 0;\n    border-bottom: 10px solid var(var(--neutrals-gray-200));\n    border-right: 10px solid transparent;\n    border-left: 10px solid transparent;\n}\n\n.tooltip__position--top-right::after {\n    content: \"\";\n    position: absolute;\n    top: -8px;\n    right: 12px;\n    width: 0;\n    height: 0;\n    border-bottom: 8px solid var(--neutrals-white);\n    border-right: 8px solid transparent;\n    border-left: 8px solid transparent;\n}\n\n/* right arrow positions */\n\n.tooltip__position--right-top::before {\n    content: \"\";\n    position: absolute;\n    top: 10px;\n    right: -10px;\n    width: 0;\n    height: 0;\n    border-top: 10px solid transparent;\n    border-bottom: 10px solid transparent;\n    border-left: 10px solid var(--neutrals-gray-200);\n}\n\n.tooltip__position--right-top::after {\n    content: \"\";\n    position: absolute;\n    top: 12px;\n    right: -8px;\n    width: 0;\n    height: 0;\n    border-top: 8px solid transparent;\n    border-bottom: 8px solid transparent;\n    border-left: 8px solid var(--neutrals-white);\n}\n\n.tooltip__position--right-center::before {\n    content: \"\";\n    position: absolute;\n    top: 50%;\n    transform: translateY(-50%);\n    right: -10px;\n    width: 0;\n    height: 0;\n    border-top: 10px solid transparent;\n    border-bottom: 10px solid transparent;\n    border-left: 10px solid var(--neutrals-gray-200);\n}\n\n.tooltip__position--right-center::after {\n    content: \"\";\n    position: absolute;\n    top: 50%;\n    transform: translateY(-50%);\n    right: -8px;\n    width: 0;\n    height: 0;\n    border-top: 8px solid transparent;\n    border-bottom: 8px solid transparent;\n    border-left: 8px solid var(--neutrals-white);\n}\n\n.tooltip__position--right-bottom::before {\n    content: \"\";\n    position: absolute;\n    bottom: 10px;\n    right: -10px;\n    width: 0;\n    height: 0;\n    border-top: 10px solid transparent;\n    border-bottom: 10px solid transparent;\n    border-left: 10px solid var(--neutrals-gray-200);\n}\n\n.tooltip__position--right-bottom::after {\n    content: \"\";\n    position: absolute;\n    bottom: 12px;\n    right: -8px;\n    width: 0;\n    height: 0;\n    border-top: 8px solid transparent;\n    border-bottom: 8px solid transparent;\n    border-left: 8px solid var(--neutrals-white);\n}\n\n/* bottom arrow positions */\n\n.tooltip__position--bottom-center:before {\n    content: \"\";\n    position: absolute;\n    bottom: -10px;\n    left: 50%;\n    transform: translateX(-50%);\n    width: 0;\n    height: 0;\n    border-top: 10px solid var(--neutrals-gray-200);\n    border-right: 10px solid transparent;\n    border-left: 10px solid transparent;\n}\n\n.tooltip__position--bottom-center:after {\n    content: \"\";\n    position: absolute;\n    bottom: -8px;\n    left: 50%;\n    transform: translateX(-50%);\n    width: 0;\n    height: 0;\n    border-top: 8px solid var(--neutrals-white);\n    border-right: 8px solid transparent;\n    border-left: 8px solid transparent;\n}\n\n\n.tooltip__position--bottom-left:before {\n    content: \"\";\n    position: absolute;\n    bottom: -10px;\n    left: 10px;\n    width: 0;\n    height: 0;\n    border-top: 10px solid var(--neutrals-gray-200);\n    border-right: 10px solid transparent;\n    border-left: 10px solid transparent;\n}\n\n.tooltip__position--bottom-left:after {\n    content: \"\";\n    position: absolute;\n    bottom: -8px;\n    left: 12px;\n    width: 0;\n    height: 0;\n    border-top: 8px solid var(--neutrals-white);\n    border-right: 8px solid transparent;\n    border-left: 8px solid transparent;\n}\n\n\n.tooltip__position--bottom-right:before {\n    content: \"\";\n    position: absolute;\n    bottom: -10px;\n    left: 90%;\n    transform: translateX(-50%);\n    width: 0;\n    height: 0;\n    border-top: 10px solid var(--neutrals-gray-200);\n    border-right: 10px solid transparent;\n    border-left: 10px solid transparent;\n}\n\n.tooltip__position--bottom-right:after {\n    content: \"\";\n    position: absolute;\n    bottom: -8px;\n    left: 90%;\n    transform: translateX(-50%);\n    width: 0;\n    height: 0;\n    border-top: 8px solid var(--neutrals-white);\n    border-right: 8px solid transparent;\n    border-left: 8px solid transparent;\n}",
+                    "styleUrl": "./tooltip.component.css"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "el",
+                        "type": "ElementRef",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 18,
+                "jsdoctags": [
+                    {
+                        "name": "el",
+                        "type": "ElementRef",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "extends": [],
+            "implements": [
+                "TooltipProps"
+            ],
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "string",
+                        "returnType": "string",
+                        "line": 35
+                    }
+                }
+            },
+            "templateData": "<div class=\"tooltip\" [ngClass]=\"classes\" [attr.data-tooltip-position]=\"arrowPosition\">\n    <ng-content></ng-content>\n    <div [ngclass]=\"classes\" *ngIf=\"isVisible\">\n        {{ content }}\n      </div>\n  \n    \n  \n  </div>\n"
         }
     ],
     "modules": [
@@ -1241,6 +1432,17 @@
         ],
         "typealiases": [
             {
+                "name": "ArrowPositionProps",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "\"left-center\" | \"left-top\" | \"left-bottom\" | \"top-center\" | \"top-left\" | \"top-right\" | \"right-top\" | \"right-center\" | \"right-bottom\" | \"bottom-center\" | \"bottom-left\" | \"bottom-right\" | \"none\"",
+                "file": "src/app/components/tooltip/tooltip.types.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 192
+            },
+            {
                 "name": "ButtonSize",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
@@ -1261,6 +1463,17 @@
                 "deprecationMessage": "",
                 "description": "",
                 "kind": 192
+            },
+            {
+                "name": "TooltipProps",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "literal type",
+                "file": "src/app/components/tooltip/tooltip.types.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 187
             }
         ],
         "enumerations": [],
@@ -1358,6 +1571,30 @@
         },
         "groupedEnumerations": {},
         "groupedTypeAliases": {
+            "src/app/components/tooltip/tooltip.types.ts": [
+                {
+                    "name": "ArrowPositionProps",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "\"left-center\" | \"left-top\" | \"left-bottom\" | \"top-center\" | \"top-left\" | \"top-right\" | \"right-top\" | \"right-center\" | \"right-bottom\" | \"bottom-center\" | \"bottom-left\" | \"bottom-right\" | \"none\"",
+                    "file": "src/app/components/tooltip/tooltip.types.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 192
+                },
+                {
+                    "name": "TooltipProps",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "literal type",
+                    "file": "src/app/components/tooltip/tooltip.types.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 187
+                }
+            ],
             "src/app/components/button/button.types.ts": [
                 {
                     "name": "ButtonSize",
@@ -1473,6 +1710,15 @@
                 "name": "faIconsList",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/tooltip/tooltip.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "TooltipComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/11",
                 "status": "low"
             },
             {

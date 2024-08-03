@@ -6,11 +6,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faArrowDown, faArrowLeft, faArrowRight, faArrowUp, faCableCar } from '@fortawesome/free-solid-svg-icons';
 import { faIconsList } from './icons';
 
-const icons = {
-  faArrowDown, faArrowLeft, faArrowRight, faArrowUp,
-  // Add more icons as needed
-};
-
 const svg = "/icons/rocket.svg";
 
 export default {
