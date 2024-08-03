@@ -34,7 +34,7 @@
     "components": [
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-39214775a6ec83e2a0108998d5310d030c2e43425941833f17cd05728b8039a3f3cc1ae6a6ac19a78a997d6cf8b68439af85cc67fbabe82805ceee23dd8209b4",
+            "id": "component-AppComponent-9a3f97152babf1c6a64b993a62f0c2a5996d18fbb6810aaa23d98bb14123217274700784e175bf7c544ed6ef3dc65f56fef816e4d13f4cf5326fd4f612d539d8",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -54,7 +54,7 @@
             "propertiesClass": [
                 {
                     "name": "title",
-                    "defaultValue": "'Coriano Storybook Project'",
+                    "defaultValue": "'angular-storybook-project'",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "string",
@@ -77,7 +77,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\nimport { RouterOutlet } from '@angular/router';\n\n@Component({\n  selector: 'app-root',\n  standalone: true,\n  imports: [RouterOutlet],\n  templateUrl: './app.component.html',\n  styleUrl: './app.component.css'\n})\nexport class AppComponent {\n  title = 'Coriano Storybook Project';\n}\n",
+            "sourceCode": "import { Component } from '@angular/core';\nimport { RouterOutlet } from '@angular/router';\n\n@Component({\n  selector: 'app-root',\n  standalone: true,\n  imports: [RouterOutlet],\n  templateUrl: './app.component.html',\n  styleUrl: './app.component.css'\n})\nexport class AppComponent {\n  title = 'angular-storybook-project';\n}\n",
             "styleUrl": "./app.component.css",
             "assetsDirs": [],
             "styleUrlsData": "",
@@ -1284,6 +1284,16 @@
                 "name": "faIconsList",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/app/components/icon/example-icon.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "[]",
+                "defaultValue": "[\n  { label: 'Arrow Down', value: faArrowDown },\n  { label: 'Arrow Left', value: faArrowLeft },\n  { label: 'Arrow Right', value: faArrowRight },\n  { label: 'Arrow Up', value: faArrowUp },\n  { label: 'Cable Car', value: faCableCar },\n]"
+            },
+            {
+                "name": "faIconsList",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/app/components/icon/icons.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1445,6 +1455,18 @@
                     "deprecationMessage": "",
                     "type": "ApplicationConfig",
                     "defaultValue": "{\n  providers: [\n    provideServerRendering()\n  ]\n}"
+                }
+            ],
+            "src/app/components/icon/example-icon.ts": [
+                {
+                    "name": "faIconsList",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/icon/example-icon.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "defaultValue": "[\n  { label: 'Arrow Down', value: faArrowDown },\n  { label: 'Arrow Left', value: faArrowLeft },\n  { label: 'Arrow Right', value: faArrowRight },\n  { label: 'Arrow Up', value: faArrowUp },\n  { label: 'Cable Car', value: faCableCar },\n]"
                 }
             ],
             "src/app/components/icon/icons.ts": [
@@ -1629,6 +1651,16 @@
                 "name": "ButtonComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/21",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/icon/example-icon.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "faIconsList",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {
