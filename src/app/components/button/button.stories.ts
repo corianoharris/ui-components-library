@@ -41,7 +41,7 @@ const meta: Meta<ButtonComponent> = {
       control: 'boolean' 
     },
     faIconLeft: { 
-      if: { arg: 'showIconLeft && showFaIconLeft && !showSvgIconLeft' },
+      if: { arg: 'showFaIconLeft && !showSvgIconLeft' },
       options: faIconsList.map(option => option.label),
       control: { type: 'select' },
       mapping: faIconsList.reduce<{ [key: string]: IconDefinition }>((acc, cur) => {
@@ -69,7 +69,7 @@ const meta: Meta<ButtonComponent> = {
       },
     },
     faIconRight: { 
-      if: { arg: 'showIconRight && showFaIconRight && !showSvgIconRight' },
+      // if: { arg: 'showIconRight && showFaIconRight && !showSvgIconRight' },
       options: faIconsList.map(option => option.label),
       control: { type: 'select' },
       mapping: faIconsList.reduce<{ [key: string]: IconDefinition }>((acc, cur) => {
@@ -97,11 +97,11 @@ const meta: Meta<ButtonComponent> = {
       },
     },
     svgIconLeft: { 
-      if: { arg: 'showIconLeft && showSvgIconLeft && !showFaIconLeft' },
+      if: { arg: 'showSvgIconLeft && !showFaIconLeft' },
       control: { type: 'text' }
     },
     svgIconRight: { 
-      if: { arg: 'showIconRight && showSvgIconRight && !showFaIconRight' },
+      if: { arg: 'showSvgIconRight && !showFaIconRight' },
       control: { type: 'text' }
     },
     clicked: { 
